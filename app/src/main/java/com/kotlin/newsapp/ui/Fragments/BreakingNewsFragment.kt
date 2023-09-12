@@ -27,7 +27,7 @@ class BreakingNewsFragment : Fragment() {
         binding = FragmentBreakingNewsBinding.inflate(layoutInflater)
 
         lifecycleScope.launch(Dispatchers.IO) {
-            val response = Retrofit.getClient().getNewsByCountry()
+            val response = Retrofit.api.getNewsByCountry()
             withContext(Dispatchers.Main){
                 if(response.isSuccessful){
                     val news : News = response.body()!!

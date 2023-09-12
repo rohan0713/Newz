@@ -3,16 +3,19 @@
 
     <item
         android:id="@+id/breakingNewsFragment"
+        android:title="Breaking News"
         android:icon="@drawable/ic_breaking_news"
         />
 
     <item
         android:id="@+id/savedNewsFragment"
+        android:title="Saved News"
         android:icon="@drawable/ic_saved_news"
         />
 
     <item
         android:id="@+id/searchNewsFragment"
+        android:title="Search News"
         android:icon="@drawable/ic_search"
         />
 
