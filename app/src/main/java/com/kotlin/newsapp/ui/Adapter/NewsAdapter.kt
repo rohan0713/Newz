@@ -15,7 +15,7 @@ class NewsAdapter(
     lateinit var binding: ArticleItemBinding
     inner class NewsViewHolder(itemview: ArticleItemBinding) : RecyclerView.ViewHolder(itemview.root) {
         fun bind(news: Article) {
-            Picasso.get().load(news.url).into(binding.ivArticleImage)
+            Picasso.get().load(news.urlToImage).into(binding.ivArticleImage)
             binding.tvDescription.text = news.description
             binding.tvPublishedAt.text = news.publishedAt
             binding.tvTitle.text = news.title

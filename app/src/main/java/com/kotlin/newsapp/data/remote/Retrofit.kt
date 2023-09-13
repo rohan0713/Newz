@@ -14,6 +14,9 @@ class Retrofit {
 
     companion object{
 
+        //lazy in Kotlin initializes a property in a lazy manner. Essentially, it creates a reference
+        // but only goes for the initialization when the property is used or called for the first time
+        // This way, the variable is initialized only once and then its value is cached for further use in the program.
         private val retro by lazy {
 
             val url = "https://newsapi.org/v2/"
@@ -31,9 +34,14 @@ class Retrofit {
                 .build()
         }
 
+        // Lazy meant to avoid unnecessary object creation.
+        // prefer using it with immutable types
         val api: MyApi by lazy {
             retro.create(MyApi::class.java)
         }
     }
+
+    // On the other hand, the = lazy statement holds a reference to the delegate object instead,
+// by which you may use the isInitialized() delegation method or access it with the value property
 
 }
