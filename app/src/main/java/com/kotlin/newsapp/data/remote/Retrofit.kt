@@ -12,6 +12,10 @@ class Retrofit {
      println("Retrofit invoked")
     }
 
+//    fun getClient() : String{
+//        return "hello"
+//    }
+
     companion object{
 
         //lazy in Kotlin initializes a property in a lazy manner. Essentially, it creates a reference
@@ -39,6 +43,10 @@ class Retrofit {
         val api: MyApi by lazy {
             retro.create(MyApi::class.java)
         }
+
+//        fun getClient() : String{
+//            return "hello"
+//        }
     }
 
     // On the other hand, the = lazy statement holds a reference to the delegate object instead,

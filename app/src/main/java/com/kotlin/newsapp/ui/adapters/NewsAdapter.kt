@@ -1,10 +1,9 @@
-package com.kotlin.newsapp.ui.Adapter
+package com.kotlin.newsapp.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlin.newsapp.data.model.Article
-import com.kotlin.newsapp.data.model.News
 import com.kotlin.newsapp.databinding.ArticleItemBinding
 import com.squareup.picasso.Picasso
 

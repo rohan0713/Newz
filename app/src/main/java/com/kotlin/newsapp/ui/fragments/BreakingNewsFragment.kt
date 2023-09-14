@@ -1,4 +1,4 @@
-package com.kotlin.newsapp.ui.Fragments
+package com.kotlin.newsapp.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,11 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.kotlin.newsapp.R
 import com.kotlin.newsapp.data.model.News
 import com.kotlin.newsapp.data.remote.Retrofit
 import com.kotlin.newsapp.databinding.FragmentBreakingNewsBinding
-import com.kotlin.newsapp.ui.Adapter.NewsAdapter
+import com.kotlin.newsapp.ui.adapters.NewsAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
