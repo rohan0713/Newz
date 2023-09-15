@@ -2,6 +2,7 @@ package com.kotlin.newsapp.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(
     tableName = "article"
@@ -17,4 +18,4 @@ data class Article(
     val urlToImage: String,
     val publishedAt: String,
     val content: String
-)
+) : Serializable

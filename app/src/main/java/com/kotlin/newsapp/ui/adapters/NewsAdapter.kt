@@ -19,6 +19,10 @@ class NewsAdapter(
             binding.tvPublishedAt.text = news.publishedAt
             binding.tvTitle.text = news.title
             binding.tvSource.text = news.author
+
+            itemView.setOnClickListener{
+                onItemClickListener?.let { it(news) }
+            }
         }
     }
 
@@ -34,5 +38,11 @@ class NewsAdapter(
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         holder.bind(list[position])
     }
+
+    fun onClickLister(listener : (Article) -> Unit){
+        onItemClickListener = listener
+    }
+
+    private var onItemClickListener : ((Article) -> Unit)? = null
 
 }
