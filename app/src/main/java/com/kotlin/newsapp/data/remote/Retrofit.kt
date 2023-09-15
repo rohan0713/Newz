@@ -1,5 +1,6 @@
 package com.kotlin.newsapp.data.remote
 
+import com.kotlin.newsapp.utils.Constants
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -23,8 +24,6 @@ class Retrofit {
         // This way, the variable is initialized only once and then its value is cached for further use in the program.
         private val retro by lazy {
 
-            val url = "https://newsapi.org/v2/"
-
             val loggingInterceptor = HttpLoggingInterceptor()
             loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
             val client = OkHttpClient.Builder()
@@ -32,7 +31,7 @@ class Retrofit {
                 .build()
 
             Retrofit.Builder()
-                .baseUrl(url)
+                .baseUrl(Constants.url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
